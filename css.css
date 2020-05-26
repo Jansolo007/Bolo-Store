@@ -1,0 +1,228 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    background:white; 
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+	background: rgb(120, 163, 161);
+}
+
+body::-webkit-scrollbar-thumb{
+	background: rgb(186, 255, 252);
+	border-radius: 20px;
+}
+
+header{
+    width: 100%;
+    height: auto;
+	background-color: rgb(20, 20, 20);
+	z-index: 2px;
+	position: fixed;
+	padding-top: 35px;
+}
+
+.InicioBoloStore{
+padding-top:120px;
+}
+
+h1{
+padding: 25px;
+}
+
+p{
+	display: inline
+}
+
+.Navegacion{
+	width: 100%;
+	margin: 0% 0%;
+	background: rgb(0, 0, 0);
+	position:fixed;
+	z-index:1;
+}
+
+.Navegacion ul{
+	list-style: none;
+}
+
+.Menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.Menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #ffffff;
+    font-family: 'Calibri';
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.Menu li a:hover{
+	background-color: rgb(20, 20, 20);
+	transition: all .3s;
+}
+
+/* Submenu */
+.Submenu_Productos{
+	position: absolute;
+	background: rgb(38, 38, 38);
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.Submenu_Productos li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+    font-family: 'Calibri';
+    font-size:16px;
+    letter-spacing:2px;
+	text-decoration: none;
+}
+
+.Menu li:hover .Submenu_Productos{
+	visibility: visible;
+	opacity: 1;
+}
+
+/* PRODUCTOS - ROPA */
+.Productos_Ropa{
+	margin: auto auto;
+    display: inline-block;
+	background: rgb(243, 241, 241);
+    max-width:220px;
+	display: inline-block;
+}
+
+.Nombre_Ropa{
+    position: absolute;
+	font-family: Calibri;
+    color: rgb(0, 0, 0);
+    font-size:18px;
+    font-weight:bold;
+	visibility: hidden;
+	background-size:100px 200px;
+}
+
+.Productos_Ropa:Hover{
+background-color:rgb(0, 140, 255);
+border: 5px solid white;
+outline: 1px solid rgb(185, 182, 182);
+}
+
+.Productos_Ropa:Hover .Nombre_Ropa{
+	background-color:white;
+	position: relative;
+    visibility:visible;
+}
+
+/* PRODUCTOS AL AZAR */
+.Productos_Azar{
+	margin: auto auto;
+    display: inline-block;
+	background: rgb(243, 241, 241);
+    max-width:220px;
+	display: inline-block;
+}
+
+.Nombre_Azar{
+    position: absolute;
+	font-family: Calibri;
+    color: rgb(0, 0, 0);
+    font-size:18px;
+    font-weight:bold;
+	visibility: hidden;
+	background-size:100px 200px;
+}
+
+.Productos_Azar:Hover{
+background-color:rgb(243, 184, 95);
+border: 5px solid white;
+outline: 1px solid rgb(185, 182, 182);
+}
+
+.Productos_Azar:Hover .Nombre_Azar{
+	background-color:white;
+	position: relative;
+    visibility:visible;
+}
+
+/* NOSOTROS */
+
+/*Qué Somos*/
+input[id^="QueSomos"]{
+	display: none;
+	}
+	
+	input[id^="QueSomos"] + label {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	padding: 5px 20px;
+	background: rgb(0, 0, 0);
+	cursor: pointer;
+	border-radius: 25px;
+	}
+
+	input[id^="QueSomos"]:checked + label {
+	opacity: 80%;
+	}
+
+	input[id^="QueSomos"] ~ .QueSomos {
+	width: 90%;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	margin: 10px auto 0;
+	}
+
+	input[id^="QueSomos"]:checked + label + .QueSomos{
+	height: auto;
+	opacity: 1;
+	}
+
+/* Dónde Comprar */
+input[id^="DondeComprar"]{
+	display: none;
+	}
+	
+	input[id^="DondeComprar"] + label {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	padding: 5px 20px;
+	background: rgb(0, 0, 0);
+	cursor: pointer;
+	border-radius: 25px;
+	}
+
+	input[id^="DondeComprar"]:checked + label {
+	opacity: 80%;
+	}
+
+	input[id^="DondeComprar"] ~ .DondeComprar {
+	width: 90%;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	margin: 10px auto 0;
+	}
+
+	input[id^="DondeComprar"]:checked + label + .DondeComprar{
+	height: auto;
+	opacity: 1;
+	}
